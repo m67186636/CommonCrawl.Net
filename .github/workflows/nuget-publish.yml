@@ -18,10 +18,16 @@ jobs:
           dotnet-version: '10.0.x' # 可根据你的项目适当调整
 
       - name: Restore dependencies
-        run: dotnet restore src
+        run: |
+          for proj in src/**/*.csproj; do
+             dotnet restore "$proj"
+          done
 
       - name: Build
-        run: dotnet build src --configuration Release --no-restore
+        run: |
+          for proj in src/**/*.csproj; do
+             dotnet build "$proj" --configuration Release --no-restore
+          done
 
       - name: Pack all projects in src
         run: |
