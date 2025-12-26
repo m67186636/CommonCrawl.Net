@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/actions/">
+    <File Path=".github/workflows/nuget-publish.yml" />
+    <File Path=".github/workflows/publish.yml" />
+  </Folder>
   <Folder Name="/examples/">
     <Project Path="CommonCraw.ConsoleApp/CommonCraw.ConsoleApp.csproj" Id="31ff5ad8-4851-4803-b5b9-46c689fd9b2a" />
   </Folder>

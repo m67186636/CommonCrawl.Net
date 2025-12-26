@@ -15,7 +15,7 @@ jobs:
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v5.0.1
         with:
-          dotnet-version: '10.0.0' # 可根据你的项目适当调整
+          dotnet-version: '10.0.x' # 可根据你的项目适当调整
 
       - name: Restore dependencies
         run: dotnet restore src
