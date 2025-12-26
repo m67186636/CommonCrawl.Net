@@ -19,7 +19,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x' # 根据你的项目版本修改
+          dotnet-version: '10.0.*' # 根据你的项目版本修改
 
       - name: Restore dependencies
         run: dotnet restore
@@ -30,7 +30,7 @@ jobs:
       - name: Pack NuGet Package
         # --no-build 表示直接打包刚才生成的二进制文件
         # -output 指定打包输出目录
-        run: dotnet pack --configuration Release --no-build --output ./nupkg
+        run: dotnet pack ./src/**/*.csproj --configuration Release --no-build --output ./nupkg
 
       - name: Push to NuGet
         # 这里的 secret 对应你在 GitHub Settings 中设置的名字
