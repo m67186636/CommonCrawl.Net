@@ -1,0 +1,36 @@
+name: Publish all src NuGet Packages
+
+on:
+  push:
+    tags:
+      - 'v*' # 仅在推送像 v1.0.0 这样的 tag 时触发
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v5.0.1
+        with:
+          dotnet-version: '10.0.0' # 可根据你的项目适当调整
+
+      - name: Restore dependencies
+        run: dotnet restore src
+
+      - name: Build
+        run: dotnet build src --configuration Release --no-restore
+
+      - name: Pack all projects in src
+        run: |
+          for proj in src/**/*.csproj; do
+              dotnet pack "$proj" --configuration Release --no-build --output ./nupkgs
+          done
+
+      - name: Push all packages to NuGet
+        run: |
+          for nupkg in ./nupkgs/*.nupkg; do
+              dotnet nuget push "$nupkg" --api-key ${{ secrets.NUGET_AUTH_TOKEN }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+          done
