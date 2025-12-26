@@ -6,6 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Authors>sunny</Authors>
 		<RootNamespace>CommonCrawl</RootNamespace>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/m67186636/CommonCrawl.Net</RepositoryUrl>
 		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
 		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>

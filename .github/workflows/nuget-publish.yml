@@ -22,6 +22,9 @@ jobs:
           for proj in src/**/*.csproj; do
              dotnet restore "$proj"
           done
+      - name: Set VERSION from git tag
+        run: |
+            echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
 
       - name: Build
         run: |
@@ -32,7 +35,7 @@ jobs:
       - name: Pack all projects in src
         run: |
           for proj in src/**/*.csproj; do
-              dotnet pack "$proj" --configuration Release --no-build --output ./nupkgs
+              dotnet pack "$proj" --configuration Release --no-build --output ./nupkgs /p:Version=${VERSION}
           done
 
       - name: Push all packages to NuGet
