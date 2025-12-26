@@ -26,7 +26,8 @@ public class StatisticsHandler : IStatisticsHandler
         await foreach (var line in lines)
         {
             // 解析每一行数据并填充到result中
-            var parts = line.Split('\t');
+            //BUG:CC-MAIN-2016-36 has a few lines that does not start with '['
+            var parts = (line.StartsWith('[') ? line : $"[{line}").Split('\t');
             if (parts.Length != 2) continue;
             var args1 = JsonSerializer.Deserialize<JsonElement[]>(parts[0]);
             var type = args1![0].GetString();
@@ -41,7 +42,7 @@ public class StatisticsHandler : IStatisticsHandler
                     {
 
                         var counts = parts[1].StartsWith('[')
-                            ? JsonSerializer.Deserialize<int[]>(parts[1])!
+                            ? JsonSerializer.Deserialize<long[]>(parts[1])!
                             :
                             [
                                 int.Parse(parts[1]),
@@ -73,8 +74,8 @@ public class StatisticsHandler : IStatisticsHandler
                 case "tld":
                     {
                         var counts = parts[1].StartsWith('[')
-                            ? JsonSerializer.Deserialize<int[]>(parts[1])!
-                            : [int.Parse(parts[1])];
+                            ? JsonSerializer.Deserialize<long[]>(parts[1])!
+                            : [long.Parse(parts[1])];
                         var domain = args1![1]!.GetString()!;
                     }
 
