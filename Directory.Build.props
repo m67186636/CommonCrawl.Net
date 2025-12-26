@@ -12,4 +12,10 @@
 		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
 		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
 	</PropertyGroup>
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="README.ja-JP.md" Pack="true" PackagePath="" />
+		<None Include="README.fr-FR.md" Pack="true" PackagePath="" />
+		<None Include="README.zh-CN.md" Pack="true" PackagePath="" />
+	</ItemGroup>
 </Project>
