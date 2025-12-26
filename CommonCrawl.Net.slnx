@@ -9,6 +9,7 @@
     <File Path="configureawait.props" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
+    <File Path="logo.png" />
     <File Path="README.fr-FR.md" />
     <File Path="README.ja-JP.md" />
     <File Path="README.md" />

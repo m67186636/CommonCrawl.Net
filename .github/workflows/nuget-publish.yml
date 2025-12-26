@@ -17,6 +17,12 @@ jobs:
         with:
           dotnet-version: '10.0.x' # 可根据你的项目适当调整
 
+      - name: Copy icon.png to all project directories
+        run: |
+          for proj in src/**/*.csproj; do
+          cp logo.png "$(dirname "$proj")/"
+          done
+
       - name: Restore dependencies
         run: |
           for proj in src/**/*.csproj; do
@@ -35,7 +41,7 @@ jobs:
       - name: Pack all projects in src
         run: |
           for proj in src/**/*.csproj; do
-              dotnet pack "$proj" --configuration Release --no-build --output ./nupkgs /p:Version=${VERSION}
+              dotnet pack "$proj" --configuration Release --no-build --output ./nupkgs /p:Version=${VERSION} /p:Pack=true
           done
 
       - name: Push all packages to NuGet
