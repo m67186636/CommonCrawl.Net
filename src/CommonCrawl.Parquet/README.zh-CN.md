@@ -1,6 +1,6 @@
 # CommonCrawl.Parquet
 
-[English](README.md) | [中文](README.zh-CN.md) | [日本語](README.ja.md) | [Français](README.fr.md)
+[English](README.md) | [中文](README.zh-CN.md) | [日本語](README.ja-JP.md) | [Français](README.fr-FR.md)
 
 这是一个用于读取 Parquet 格式的 Common Crawl 索引数据的 .NET 库。该库提供了强类型模型和高效的读取器来处理 Common Crawl 索引记录。
 
@@ -12,7 +12,13 @@
 
 ## 安装
 
-请确保您已安装必要的依赖项。本项目使用 `Parquet.Net`。
+通过 NuGet 安装包：
+
+[![NuGet](https://img.shields.io/nuget/v/CommonCrawl.Parquet.svg)](https://www.nuget.org/packages/CommonCrawl.Parquet)
+
+```bash
+dotnet add package CommonCrawl.Parquet
+```
 
 ## 使用方法
 

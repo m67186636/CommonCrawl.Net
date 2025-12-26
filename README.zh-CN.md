@@ -27,7 +27,17 @@
 - .NET 10.0 SDK 或更高版本。
 
 #### 安装
-目前，您可以从源代码构建项目：
+您可以通过 NuGet 安装这些包：
+
+- **CommonCrawl.Net**: [![NuGet](https://img.shields.io/nuget/v/CommonCrawl.Net.svg)](https://www.nuget.org/packages/CommonCrawl.Net)
+- **CommonCrawl.Parquet**: [![NuGet](https://img.shields.io/nuget/v/CommonCrawl.Parquet.svg)](https://www.nuget.org/packages/CommonCrawl.Parquet)
+
+```bash
+dotnet add package CommonCrawl.Net
+dotnet add package CommonCrawl.Parquet
+```
+
+或者，您可以从源代码构建项目：
 ```bash
 git clone https://github.com/m67186636/CommonCrawl.Net.git
 cd CommonCrawl.Net

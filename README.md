@@ -27,7 +27,17 @@ This repository contains the following components:
 - .NET 10.0 SDK or later.
 
 #### Installation
-Currently, you can build the project from source:
+You can install the packages via NuGet:
+
+- **CommonCrawl.Net**: [![NuGet](https://img.shields.io/nuget/v/CommonCrawl.Net.svg)](https://www.nuget.org/packages/CommonCrawl.Net)
+- **CommonCrawl.Parquet**: [![NuGet](https://img.shields.io/nuget/v/CommonCrawl.Parquet.svg)](https://www.nuget.org/packages/CommonCrawl.Parquet)
+
+```bash
+dotnet add package CommonCrawl.Net
+dotnet add package CommonCrawl.Parquet
+```
+
+Or you can build the project from source:
 ```bash
 git clone https://github.com/m67186636/CommonCrawl.Net.git
 cd CommonCrawl.Net

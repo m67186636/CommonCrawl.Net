@@ -1,6 +1,6 @@
 # CommonCrawl.Parquet
 
-[English](README.md) | [中文](README.zh-CN.md) | [日本語](README.ja.md) | [Français](README.fr.md)
+[English](README.md) | [中文](README.zh-CN.md) | [日本語](README.ja-JP.md) | [Français](README.fr-FR.md)
 
 Une bibliothèque .NET pour lire les données d'index Common Crawl stockées au format Parquet. Cette bibliothèque fournit des modèles fortement typés et un lecteur efficace pour traiter les enregistrements d'index Common Crawl.
 
@@ -12,7 +12,13 @@ Une bibliothèque .NET pour lire les données d'index Common Crawl stockées au 
 
 ## Installation
 
-Assurez-vous de disposer des dépendances nécessaires. Ce projet utilise `Parquet.Net`.
+Installez le package via NuGet :
+
+[![NuGet](https://img.shields.io/nuget/v/CommonCrawl.Parquet.svg)](https://www.nuget.org/packages/CommonCrawl.Parquet)
+
+```bash
+dotnet add package CommonCrawl.Parquet
+```
 
 ## Utilisation
 

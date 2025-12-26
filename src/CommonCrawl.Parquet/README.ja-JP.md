@@ -1,6 +1,6 @@
 # CommonCrawl.Parquet
 
-[English](README.md) | [中文](README.zh-CN.md) | [日本語](README.ja.md) | [Français](README.fr.md)
+[English](README.md) | [中文](README.zh-CN.md) | [日本語](README.ja-JP.md) | [Français](README.fr-FR.md)
 
 Parquet形式で保存されたCommon Crawlインデックスデータを読み取るための.NETライブラリです。このライブラリは、Common Crawlインデックスレコードを処理するための強力に型付けされたモデルと効率的なリーダーを提供します。
 
@@ -12,7 +12,13 @@ Parquet形式で保存されたCommon Crawlインデックスデータを読み�
 
 ## インストール
 
-必要な依存関係があることを確認してください。このプロジェクトは `Parquet.Net` を使用しています。
+NuGet 経由でパッケージをインストールします：
+
+[![NuGet](https://img.shields.io/nuget/v/CommonCrawl.Parquet.svg)](https://www.nuget.org/packages/CommonCrawl.Parquet)
+
+```bash
+dotnet add package CommonCrawl.Parquet
+```
 
 ## 使い方
 

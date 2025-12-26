@@ -27,7 +27,17 @@
 - .NET 10.0 SDK 以降。
 
 #### インストール
-現在、ソースからプロジェクトをビルドできます：
+NuGet 経由でパッケージをインストールできます：
+
+- **CommonCrawl.Net**: [![NuGet](https://img.shields.io/nuget/v/CommonCrawl.Net.svg)](https://www.nuget.org/packages/CommonCrawl.Net)
+- **CommonCrawl.Parquet**: [![NuGet](https://img.shields.io/nuget/v/CommonCrawl.Parquet.svg)](https://www.nuget.org/packages/CommonCrawl.Parquet)
+
+```bash
+dotnet add package CommonCrawl.Net
+dotnet add package CommonCrawl.Parquet
+```
+
+または、ソースからプロジェクトをビルドできます：
 ```bash
 git clone https://github.com/m67186636/CommonCrawl.Net.git
 cd CommonCrawl.Net
